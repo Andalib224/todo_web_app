@@ -2,12 +2,12 @@ import streamlit as st
 import functions
 
 todos = functions.get_todos("todos.txt")
+
+
 def new_todo():
     todo = st.session_state["new_todo"] + "\n"
     print(todo)
-
     todos.append(todo)
-
     functions.write_todos(todos)
 
 
